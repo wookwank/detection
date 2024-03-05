@@ -14,7 +14,7 @@ python3.6 -m pip install --upgrade pip
 python3.6 -m pip install -r requirements.txt
 ```
 
-2. Make a choice of configuration and checkpoint file to use from [ImVoxelNet dataset](https://github.com/SamsungLabs/imvoxelnet/blob/master/README.md#models).
+2. Make a choice of configuration and checkpoint file to use from [ImVoxelNet dataset](https://github.com/SamsungLabs/imvoxelnet/blob/master/README.md#models). Update ModelHandler class initialization accordingly.
 
 3. Run the detector.
 ```console
