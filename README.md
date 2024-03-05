@@ -5,4 +5,9 @@ This module interfaces with the EasyVizAR Edge Server, facilitating automated ob
 Implementation of this repository was based upon EasyVizAR supported YOLOv8 Object Detection add-on module.
 <https://github.com/EasyVizAR/detect>
 
+To learn more about EasyVizAR Edge Server,
+<https://github.com/EasyVizAR/edge-server>
+
+To learn more about ImVoxelNet,
+<https://github.com/SamsungLabs/imvoxelnet>
 
