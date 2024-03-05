@@ -12,3 +12,5 @@ Install dependencies
 ```console
 python3 -m pip install -r requirements.txt
 ```
+
+To run the ImVoxelNet model, download [configuration](https://github.com/SamsungLabs/imvoxelnet/blob/master/configs/imvoxelnet/imvoxelnet_total_sunrgbd_fast.py) and [checkpoint file](https://github.com/saic-vul/imvoxelnet/releases/download/v1.2/20211007_105247.pth)
