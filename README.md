@@ -5,4 +5,10 @@ This module interfaces with the [EasyVizAR Edge Server](https://github.com/EasyV
 Implementation of this repository was based upon EasyVizAR supported YOLOv8 Object Detection add-on module.
 <https://github.com/EasyVizAR/detect>
 
-## Getting Started
+## Installation & Setup
+
+Install dependencies
+
+```console
+python3 -m pip install -r requirements.txt
+```
