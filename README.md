@@ -7,16 +7,16 @@ This implementation was based upon EasyVizAR supported YOLOv8 Object Detection a
 
 ## Installation
 
-Install dependencies.
+1. Install dependencies.
 
 ```console
 python3.6 -m pip install --upgrade pip
 python3.6 -m pip install -r requirements.txt
 ```
 
-Make a choice of configuration and checkpoint file to use from [ImVoxelNet dataset](https://github.com/SamsungLabs/imvoxelnet/blob/master/README.md#models).
+2. Make a choice of configuration and checkpoint file to use from [ImVoxelNet dataset](https://github.com/SamsungLabs/imvoxelnet/blob/master/README.md#models).
 
-Run the detector.
+3. Run the detector.
 ```console
 python3.6 -m detect
 ```
