@@ -5,12 +5,18 @@ This module interfaces with the [EasyVizAR Edge Server](https://github.com/EasyV
 This implementation was based upon EasyVizAR supported YOLOv8 Object Detection add-on module.
 <https://github.com/EasyVizAR/detect>
 
-## Installation & Setup
+## Installation
 
 Install dependencies.
 
 ```console
-python3 -m pip install -r requirements.txt
+python3.6 -m pip install --upgrade pip
+python3.6 -m pip install -r requirements.txt
 ```
 
-Initialize the ImVoxelNet model by downloading [configuration](https://github.com/SamsungLabs/imvoxelnet/blob/master/configs/imvoxelnet/imvoxelnet_total_sunrgbd_fast.py) and [checkpoint file](https://github.com/saic-vul/imvoxelnet/releases/download/v1.2/20211007_105247.pth).
+Make a choice of configuration and checkpoint file to use from [ImVoxelNet dataset](https://github.com/SamsungLabs/imvoxelnet/blob/master/README.md#models).
+
+Run the detector.
+```console
+python3.6 -m detect
+```
