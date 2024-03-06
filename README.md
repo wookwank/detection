@@ -6,7 +6,7 @@ This implementation was based upon EasyVizAR supported YOLOv8 Object Detection a
 <https://github.com/EasyVizAR/detect>
 
 ## Installation
-(Optional) For instructions on setting up an edge server and EasyVizAR headsets, please refer to the [installation guide](https://easyvizar.github.io/installation.html).
+(Optional) For instructions on setting up an edge server and AR headsets, please refer to the [installation guide](https://easyvizar.github.io/installation.html).
 
 1. Install dependencies.
 
