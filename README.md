@@ -6,6 +6,7 @@ This implementation was based upon EasyVizAR supported YOLOv8 Object Detection a
 <https://github.com/EasyVizAR/detect>
 
 ## Installation
+(Optional) For instructions on setting up an edge server and EasyVizAR headsets, please refer to the [installation guide](https://easyvizar.github.io/installation.html).
 
 1. Install dependencies.
 
@@ -14,7 +15,7 @@ python3.6 -m pip install --upgrade pip
 python3.6 -m pip install -r requirements.txt
 ```
 
-2. Make a choice of configuration and checkpoint file to use from [ImVoxelNet dataset](https://github.com/SamsungLabs/imvoxelnet/blob/master/README.md#models). Update ModelHandler class initialization accordingly.
+2. Choose configuration and checkpoint file to use from [ImVoxelNet dataset](https://github.com/SamsungLabs/imvoxelnet/blob/master/README.md#models). Update ModelHandler class initialization accordingly.
 ```console
 detector = ModelHandler([config_path], [checkpoint_path])
 ```
