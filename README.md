@@ -23,6 +23,6 @@ detector = ModelHandler([config_path], [checkpoint_path])
 ```console
 python3.6 -m detect
 ```
-## Flowchart
+## Design
 
   ![Class UML Diagram](./flowchart6.png)
