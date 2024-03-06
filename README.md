@@ -14,7 +14,7 @@ python3.6 -m pip install --upgrade pip
 python3.6 -m pip install -r requirements.txt
 ```
 
-2. Choose configuration and checkpoint file to use from [ImVoxelNet dataset](https://github.com/SamsungLabs/imvoxelnet/blob/master/README.md#models). By default, it is set to use Update ModelHandler class initialization accordingly.
+2. Choose configuration and checkpoint file to use from [ImVoxelNet dataset](https://github.com/SamsungLabs/imvoxelnet/blob/master/README.md#models). By default, it is set to use SUN RGB-D dataset with 37 object labels. Update ModelHandler class initialization accordingly.
 ```console
 detector = ModelHandler([config_path], [checkpoint_path])
 ```
