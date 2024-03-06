@@ -25,4 +25,4 @@ python3.6 -m detect
 ```
 ## Design
 
-  ![Class UML Diagram](./flowchart6.png)
+  ![Design flowchart](./flowchart.png)
