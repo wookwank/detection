@@ -31,7 +31,7 @@ For local testing in a personal AR environment using an AR device and images, pl
 VIZAR_SERVER = os.environ.get("VIZAR_SERVER", "localhost:5000")
 ```
 
-For general testing purposes, utilize the EasyVizAR edge server provided by the University of Wisconsin. Access images uploaded on the server. Log in to the website using the username "guest" with no password. Please note that this is strictly for testing purposes, and testers should refrain from modifying any data. Set the server variable to the address of the server.
+For general testing purposes, utilize the [EasyVizAR edge server](https://easyvizar.wings.cs.wisc.edu/) provided by the University of Wisconsin. Access images uploaded on the server. Log in to the website using the username "guest" with no password. Please note that this is strictly for testing purposes, and testers should refrain from modifying any data. Set the server variable to the address of the server.
 ```console
 VIZAR_SERVER = os.environ.get("VIZAR_SERVER", "easyvizar.wings.cs.wisc.edu")
 ```
