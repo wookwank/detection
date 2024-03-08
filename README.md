@@ -23,6 +23,19 @@ detector = ModelHandler([config_path], [checkpoint_path])
 ```console
 python3.6 -m detect
 ```
+
+## Testing
+
+For local testing in a personal AR environment using an AR device and images, please refer to the [installation guide](https://easyvizar.github.io/installation.html) for instructions on setting up and utilizing an edge server and AR headsets. When specifying the server variable, ensure it is set to the localhost address of the edge server.
+```console
+VIZAR_SERVER = os.environ.get("VIZAR_SERVER", "localhost:5000")
+```
+
+For general testing purposes, utilize the EasyVizAR edge server provided by the University of Wisconsin. Access images uploaded on the server. Log in to the website using the username "guest" with no password. Please note that this is strictly for testing purposes, and testers should refrain from modifying any data. Set the server variable to the address of the server.
+```console
+VIZAR_SERVER = os.environ.get("VIZAR_SERVER", "easyvizar.wings.cs.wisc.edu")
+```
+
 ## Design
 
   ![Design flowchart](./flowchart.png)
