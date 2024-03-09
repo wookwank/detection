@@ -8,13 +8,13 @@ This implementation was based upon EasyVizAR supported [YOLOv8 Object Detection 
 
 (Optional) For instructions on setting up an edge server and AR headsets, please refer to the [installation guide](https://easyvizar.github.io/installation.html).
 
-1. Build the Docker image using the [Dockerfile](https://github.com/SamsungLabs/imvoxelnet/blob/master/docker/Dockerfile). Replace `{image_name}` with your desired name for the Docker image.
+1. Build the Docker image using the [Dockerfile](https://github.com/SamsungLabs/imvoxelnet/blob/master/docker/Dockerfile). Replace `image_name` with your preferred name for the Docker image.
 
 ```console
 docker build . -t {image_name}
 ```
 
-2. Initialize the Docker container and mount our repository inside it. Ensure GPU access is enabled. Replace `{container_name}` with your preferred name for the Docker container, `{repo_path_outside}` with the path to your local repository directory outside the container, `{repo_path_inside}` with the corresponding path inside the container, and `{image_name}` with the name of the Docker image you built in step 1.
+2. Initialize the Docker container and mount our repository inside it. Ensure GPU access is enabled. Replace `container_name` with your preferred name for the Docker container, `repo_path_outside` with the path to your local repository directory outside the container, `repo_path_inside` with the corresponding path inside the container, and `image_name` with the name of the Docker image from step 1.
 
 ```console
 docker run -dit --gpus all --name {container_name} -v {repo_path_outside}:{repo_path_inside} {image_name} /bin/bash
