@@ -5,23 +5,31 @@ This module interfaces with the [EasyVizAR Edge Server](https://github.com/EasyV
 This implementation was based upon EasyVizAR supported [YOLOv8 Object Detection add-on module](https://github.com/EasyVizAR/detect).
 
 ## Installation
+
 (Optional) For instructions on setting up an edge server and AR headsets, please refer to the [installation guide](https://easyvizar.github.io/installation.html).
 
-1. Install dependencies.
+1. Build the Docker image using the [Dockerfile](https://github.com/SamsungLabs/imvoxelnet/blob/master/docker/Dockerfile). Replace '{image_name}' with your desired name for the Docker image.
 
 ```console
-python3.6 -m pip install --upgrade pip
-python3.6 -m pip install -r requirements.txt
+docker build . -t {image_name}
 ```
 
-2. Choose configuration and checkpoint file to use from [ImVoxelNet dataset](https://github.com/SamsungLabs/imvoxelnet/blob/master/README.md#models). By default, it is set to use v3 model of [Total3DUnderstanding](https://github.com/SamsungLabs/imvoxelnet?tab=readme-ov-file) benchmark. Update ModelHandler class initialization accordingly.
+2. Initialize the Docker container and mount our repository inside it. Ensure GPU access is enabled. Replace '{container_name}' with your preferred name for the Docker container, '{repo_path_outside}' with the path to your local repository directory outside the container, '{repo_path_inside}' with the corresponding path inside the container, and '{image_name}' with the name of the Docker image you built in step 1.
+
+```console
+docker run -dit --gpus all --name {container_name} -v {repo_path_outside}:{repo_path_inside} {image_name} /bin/bash
+```
+
+3. Choose configuration and checkpoint file to use from [ImVoxelNet dataset](https://github.com/SamsungLabs/imvoxelnet/blob/master/README.md#models). By default, it is set to use v3 model of [Total3DUnderstanding](https://github.com/SamsungLabs/imvoxelnet?tab=readme-ov-file) benchmark. Update ModelHandler class initialization accordingly.
+
 ```console
 detector = ModelHandler([config_path], [checkpoint_path])
 ```
 
-3. Run the detector.
+4. Run the detector.
+
 ```console
-python3.6 -m detect
+python3 -m detect
 ```
 
 ## Testing
