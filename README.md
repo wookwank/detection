@@ -14,16 +14,16 @@ This implementation was based upon EasyVizAR supported [YOLOv8 Object Detection 
 docker build . -t {image_name}
 ```
 
-2. Initialize the Docker container and mount our repository inside it. Ensure GPU access is enabled. Replace '{container_name}' with your preferred name for the Docker container, '{repo_path_outside}' with the path to your local repository directory outside the container, '{repo_path_inside}' with the corresponding path inside the container, and '{image_name}' with the name of the Docker image you built in step 1.
+2. Initialize the Docker container and mount our repository inside it. Ensure GPU access is enabled. Replace `{container_name}` with your preferred name for the Docker container, `{repo_path_outside}` with the path to your local repository directory outside the container, `{repo_path_inside}` with the corresponding path inside the container, and `{image_name}` with the name of the Docker image you built in step 1.
 
 ```console
 docker run -dit --gpus all --name {container_name} -v {repo_path_outside}:{repo_path_inside} {image_name} /bin/bash
 ```
 
-3. Choose configuration and checkpoint file to use from [ImVoxelNet dataset](https://github.com/SamsungLabs/imvoxelnet/blob/master/README.md#models). By default, it is set to use v3 model of [Total3DUnderstanding](https://github.com/SamsungLabs/imvoxelnet?tab=readme-ov-file) benchmark. Update ModelHandler class initialization accordingly.
+3. Download [model](https://github.com/saic-vul/imvoxelnet/releases/download/v1.2/20211007_105247.pth) and [configuration](https://github.com/SamsungLabs/imvoxelnet/blob/master/configs/imvoxelnet/imvoxelnet_total_sunrgbd_fast.py) files and place them in some place the Docker container can access. Update ModelHandler class initialization accordingly.
 
 ```console
-detector = ModelHandler([config_path], [checkpoint_path])
+detector = ModelHandler([config_path], [model_path])
 ```
 
 4. Run the detector.
