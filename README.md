@@ -20,7 +20,7 @@ docker build . -t {image_name}
 docker run -dit --gpus all --name {container_name} -v {repo_path_outside}:{repo_path_inside} {image_name} /bin/bash
 ```
 
-3. Download [model](https://github.com/saic-vul/imvoxelnet/releases/download/v1.2/20211007_105247.pth) and [configuration](https://github.com/SamsungLabs/imvoxelnet/blob/master/configs/imvoxelnet/imvoxelnet_total_sunrgbd_fast.py) files and place them in some place the Docker container can access. Update ModelHandler class initialization accordingly.
+3. Download [model](https://github.com/saic-vul/imvoxelnet/releases/download/v1.2/20211007_105247.pth) and [configuration](https://github.com/SamsungLabs/imvoxelnet/blob/master/configs/imvoxelnet/imvoxelnet_total_sunrgbd_fast.py) files and place them somewhere accessible by the Docker container. Update ModelHandler class initialization accordingly.
 
 ```console
 detector = ModelHandler([config_path], [model_path])
@@ -32,7 +32,6 @@ detector = ModelHandler([config_path], [model_path])
 python3 -m detect
 ```
 
-## Testing
 
 For local testing in a personal AR environment using an AR device and images, please refer to the [installation guide](https://easyvizar.github.io/installation.html) for instructions on setting up and utilizing an edge server and AR headsets. When specifying the server variable, ensure it is set to the localhost address of the edge server.
 ```console
