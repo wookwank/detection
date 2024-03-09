@@ -8,7 +8,7 @@ This implementation was based upon EasyVizAR supported [YOLOv8 Object Detection 
 
 (Optional) For instructions on setting up an edge server and AR headsets, please refer to the [installation guide](https://easyvizar.github.io/installation.html).
 
-1. Build the Docker image using the [Dockerfile](https://github.com/SamsungLabs/imvoxelnet/blob/master/docker/Dockerfile). Replace `image_name` with your desired name for the Docker image.
+1. Build the Docker image using the [Dockerfile](https://github.com/SamsungLabs/imvoxelnet/blob/master/docker/Dockerfile). Replace `{image_name}` with your desired name for the Docker image.
 
 ```console
 docker build . -t {image_name}
