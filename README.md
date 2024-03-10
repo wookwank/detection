@@ -8,22 +8,29 @@ This implementation was based upon EasyVizAR supported [YOLOv8 Object Detection 
 
 (Optional) For instructions on setting up an edge server and AR headsets, please refer to the [installation guide](https://easyvizar.github.io/installation.html).
 
-1. Build the Docker image using the [Dockerfile](https://github.com/SamsungLabs/imvoxelnet/blob/master/docker/Dockerfile). Replace `image_name` with your preferred name for the Docker image.
+1. Build the Docker image using the ImVoxelNet [Dockerfile](https://github.com/SamsungLabs/imvoxelnet/blob/master/docker/Dockerfile). Replace `image_name` with your preferred name for the Docker image.
 
 ```console
 docker build . -t {image_name}
 ```
 
-2. Initialize the Docker container and mount our repository inside it. Ensure GPU access is enabled. Replace `container_name` with your preferred name for the Docker container, `repo_path_outside` with the path to your local repository directory outside the container, `repo_path_inside` with the corresponding path inside the container, and `image_name` with the name of the Docker image from step 1.
+2. Initialize the Docker container and mount this repository inside it. Ensure GPU access is enabled. Replace `container_name` with your preferred name for the Docker container, `repo_path_outside` with the path to this repository in local, `repo_path_inside` with the corresponding path inside the container, and `image_name` with the name of the Docker image from step 1.
 
 ```console
 docker run -dit --gpus all --name {container_name} -v {repo_path_outside}:{repo_path_inside} {image_name} /bin/bash
 ```
 
+3. Install additional dependencies required for the module inside the Docker container.
+
+```console
+cd {repo_path_inside}
+pip install -r requirements.txt
+```
+
 3. Download [model](https://github.com/saic-vul/imvoxelnet/releases/download/v1.2/20211007_105247.pth) and [configuration](https://github.com/SamsungLabs/imvoxelnet/blob/master/configs/imvoxelnet/imvoxelnet_total_sunrgbd_fast.py) files and place them somewhere accessible by the Docker container. Update ModelHandler class initialization accordingly.
 
 ```console
-detector = ModelHandler([config_path], [model_path])
+detector = ModelHandler({config_path}, {model_path})
 ```
 
 4. Run the detector.
