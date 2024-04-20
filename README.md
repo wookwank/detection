@@ -38,7 +38,7 @@ python3 -m detect
 
 ### Threshold Settings
 
-In order to customize the behavior of the module, you can adjust the following threshold settings:
+To customize the behavior of the module, adjust the following threshold settings:
 
 - **DUP_DIST_THRES**: If two objects have a distance smaller than this threshold (in meters), they will be counted as duplicated. Adjust this value according to your specific requirements. For example, setting it to 2 meters will consider objects closer than 2 meters as duplicates.
 
@@ -48,15 +48,13 @@ Make sure to test the module with different threshold values to ensure optimal p
 
 ### Sorting order
 
-You can manually change the sorting order of images using the following code snippet:
+Manually change the sorting order of images using the following code snippet. By default, images are sorted by priority level (descending), then creation time (ascending). 
 
 ```console
 for item in items:
     item['priority_tuple'] = (-1 * item.get("priority", 0), item.get("created"))
 items.sort(key=operator.itemgetter("priority_tuple"))
 ```
-
-
 
 ## Testing
 
