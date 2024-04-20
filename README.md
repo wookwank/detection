@@ -36,19 +36,13 @@ python3 -m detect
 
 ## Configuration
 
-### Duplication Distance Threshold
+### Threshold Settings
 
-If two objects have a distance smaller than this threshold (in meters), they will be counted as duplicated.
-```console
-DUP_DIST_THRES = 2
-```
+In order to customize the behavior of the system, you can adjust the following threshold settings:
 
-### Data Timeout
+- **DUP_DIST_THRES**: This threshold defines the maximum distance (in meters) between two objects to consider them as duplicated. Adjust this value according to your specific requirements. For example, setting it to 2 meters will consider objects closer than 2 meters as duplicates.
 
-If the data frame is behind the current time by over this threshold (in seconds), it will be ignored. Set it to -1 to disable this feature.
-```console
-DATA_TIMEOUT = -1
-```
+- **DATA_TIMEOUT**: If the data frame is behind the current time by more than this threshold (in seconds), it will be ignored. Set it to -1 to disable this feature. This setting is useful for filtering out outdated data. For example, setting it to 300 seconds will ignore data frames older than 5 minutes.
 
 ## Testing
 
