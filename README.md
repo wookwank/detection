@@ -46,6 +46,18 @@ In order to customize the behavior of the module, you can adjust the following t
 
 Make sure to test the module with different threshold values to ensure optimal performance for your use case.
 
+### Sorting order
+
+You can manually change the sorting order of images using the following code snippet:
+
+```console
+for item in items:
+    item['priority_tuple'] = (-1 * item.get("priority", 0), item.get("created"))
+items.sort(key=operator.itemgetter("priority_tuple"))
+```
+
+
+
 ## Testing
 
 For local testing in a personal AR environment using an AR device and images, please refer to the [installation guide](https://easyvizar.github.io/installation.html) for instructions on setting up and utilizing an edge server and AR headsets. When specifying the server variable, ensure it is set to the localhost address of the edge server.
