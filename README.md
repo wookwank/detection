@@ -51,7 +51,6 @@ Make sure to test the module with different threshold values to ensure optimal p
 Manually change the sorting order of images. By default, images are sorted by priority level (descending), then creation time (ascending). 
 
 ```console
-# Sort by priority level (descending), then creation time (ascending)
 for item in items:
     item['priority_tuple'] = (-1 * item.get("priority", 0), item.get("created"))
 items.sort(key=operator.itemgetter("priority_tuple"))
