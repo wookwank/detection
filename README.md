@@ -46,9 +46,9 @@ To customize the behavior of the module, adjust the following threshold settings
 
 Make sure to test the module with different threshold values to ensure optimal performance for your use case.
 
-### Sorting order
+### Processing order
 
-Manually change the sorting order of images. By default, images are sorted by priority level (descending), then creation time (ascending). 
+Manually change the processing order of images. By default, images are processed by priority level (descending), then creation time (ascending). 
 
 ```console
 for item in items:
