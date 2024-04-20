@@ -40,9 +40,9 @@ python3 -m detect
 
 In order to customize the behavior of the module, you can adjust the following threshold settings:
 
-- **DUP_DIST_THRES**: This threshold defines the maximum distance (in meters) between two objects to consider them as duplicated. Adjust this value according to your specific requirements. For example, setting it to 2 meters will consider objects closer than 2 meters as duplicates.
+- **DUP_DIST_THRES**: If two objects have a distance smaller than this threshold (in meters), they will be counted as duplicated. Adjust this value according to your specific requirements. For example, setting it to 2 meters will consider objects closer than 2 meters as duplicates.
 
-- **DATA_TIMEOUT**: If the data frame is behind the current time by more than this threshold (in seconds), it will be ignored. Set it to -1 to disable this feature. This setting is useful for filtering out outdated data. For example, setting it to 300 seconds will ignore data frames older than 5 minutes.
+- **DATA_TIMEOUT**: If the data frame is behind the current time by over this threshold (in seconds), it will be ignored. Set it to -1 to disable this feature
 
 Make sure to test the module with different threshold values to ensure optimal performance for your use case.
 
