@@ -34,6 +34,22 @@ cd {repo_path_inside}
 python3 -m detect
 ```
 
+## Configuration
+
+### Duplication Distance Threshold
+
+If two objects have a distance smaller than this threshold (in meters), they will be counted as duplicated.
+```console
+DUP_DIST_THRES = 2
+```
+
+### Data Timeout
+
+If the data frame is behind the current time by over this threshold (in seconds), it will be ignored. Set it to -1 to disable this feature.
+```console
+DATA_TIMEOUT = -1
+```
+
 ## Testing
 
 For local testing in a personal AR environment using an AR device and images, please refer to the [installation guide](https://easyvizar.github.io/installation.html) for instructions on setting up and utilizing an edge server and AR headsets. When specifying the server variable, ensure it is set to the localhost address of the edge server.
